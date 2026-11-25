@@ -1,4 +1,4 @@
-// Disable Shorts — content script (runs at document_start on youtube.com and m.youtube.com).
+// No Shorts — content script (runs at document_start on youtube.com and m.youtube.com).
 (() => {
   "use strict";
 

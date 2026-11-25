@@ -1,4 +1,4 @@
-/* Disable Shorts: everything is scoped to html[data-disable-shorts] so the popup toggle works instantly. */
+/* No Shorts: everything is scoped to html[data-disable-shorts] so the popup toggle works instantly. */
 
 /* ---- Shelves / grids of Shorts (home, subscriptions, search, watch sidebar, channel home) ---- */
 html[data-disable-shorts] ytd-reel-shelf-renderer,
