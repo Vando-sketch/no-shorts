@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Disable Shorts",
+  "version": "1.0.0",
+  "description": "Removes YouTube Shorts everywhere and opens Shorts links in the normal video player.",
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": {
+    "default_title": "Disable Shorts",
+    "default_popup": "popup/popup.html",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png" }
+  },
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["*://www.youtube.com/*", "*://m.youtube.com/*", "*://youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*", "*://youtube.com/*"],
+      "css": ["content/hide.css"],
+      "js": ["content/content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{ "id": "redirect", "enabled": true, "path": "rules/redirect.json" }]
+  },
+  "browser_specific_settings": {
+    "gecko": { "id": "disable-shorts@vando-sketch", "strict_min_version": "128.0" }
+  }
+}

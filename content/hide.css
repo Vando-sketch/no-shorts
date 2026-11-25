@@ -1,0 +1,63 @@
+/* Disable Shorts: everything is scoped to html[data-disable-shorts] so the popup toggle works instantly. */
+
+/* ---- Shelves / grids of Shorts (home, subscriptions, search, watch sidebar, channel home) ---- */
+html[data-disable-shorts] ytd-reel-shelf-renderer,
+html[data-disable-shorts] ytd-rich-shelf-renderer[is-shorts],
+html[data-disable-shorts] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+html[data-disable-shorts] ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model),
+html[data-disable-shorts] ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model-v2),
+html[data-disable-shorts] ytd-item-section-renderer:has(> #contents > ytd-reel-shelf-renderer:only-child),
+html[data-disable-shorts] grid-shelf-view-model:has(ytm-shorts-lockup-view-model),
+html[data-disable-shorts] grid-shelf-view-model:has(ytm-shorts-lockup-view-model-v2),
+html[data-disable-shorts] ytd-shelf-renderer:has(ytm-shorts-lockup-view-model),
+html[data-disable-shorts] ytd-shelf-renderer:has(ytd-reel-item-renderer),
+html[data-disable-shorts] ytm-shorts-lockup-view-model,
+html[data-disable-shorts] ytm-shorts-lockup-view-model-v2,
+html[data-disable-shorts] ytd-reel-item-renderer,
+html[data-disable-shorts] .ds-hidden-by-js {
+  display: none !important;
+}
+
+/* ---- Single tiles that link to /shorts/ ---- */
+html[data-disable-shorts] ytd-rich-item-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytd-video-renderer:has(a#thumbnail[href^="/shorts/"]),
+html[data-disable-shorts] ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytd-playlist-video-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytd-playlist-panel-video-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] yt-lockup-view-model:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytd-notification-renderer:has(a[href*="/shorts/"]),
+html[data-disable-shorts] ytd-comment-video-thumbnail-header-renderer:has(a[href^="/shorts/"]) {
+  display: none !important;
+}
+
+/* ---- Navigation entries ---- */
+html[data-disable-shorts] ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-disable-shorts] ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+html[data-disable-shorts] ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+html[data-disable-shorts] ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]),
+html[data-disable-shorts] yt-tab-shape[tab-title="Shorts"],
+html[data-disable-shorts] tp-yt-paper-tab:has(> .tab-content[tab-title="Shorts"]) {
+  display: none !important;
+}
+
+/* ---- Search "Shorts" filter chip and shorts-only badges ---- */
+html[data-disable-shorts] yt-chip-cloud-chip-renderer:has(a[href*="sp=EgIYAQ"]) {
+  display: none !important;
+}
+
+/* ---- Mobile site (m.youtube.com) ---- */
+html[data-disable-shorts] ytm-reel-shelf-renderer,
+html[data-disable-shorts] ytm-shorts-lockup-view-model,
+html[data-disable-shorts] ytm-rich-section-renderer:has(ytm-reel-shelf-renderer),
+html[data-disable-shorts] ytm-rich-section-renderer:has(ytm-shorts-lockup-view-model),
+html[data-disable-shorts] ytm-rich-section-renderer:has(ytm-shorts-lockup-view-model-v2),
+html[data-disable-shorts] ytm-item-section-renderer:has(> lazy-list > ytm-reel-shelf-renderer:only-child),
+html[data-disable-shorts] ytm-video-with-context-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytm-rich-item-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytm-compact-video-renderer:has(a[href^="/shorts/"]),
+html[data-disable-shorts] ytm-pivot-bar-item-renderer:has(.pivot-shorts),
+html[data-disable-shorts] ytm-pivot-bar-item-renderer:has(a[href^="/shorts"]),
+html[data-disable-shorts] ytm-notification-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
