@@ -1,0 +1,56 @@
+name: Shorts are showing
+description: A Shorts shelf, tile, button or link got through.
+title: "Shorts showing on: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: Where do Shorts show up?
+      options:
+        - Home
+        - Search results
+        - Subscriptions
+        - Channel page
+        - Watch page (sidebar or below the video)
+        - Notifications
+        - Sidebar / navigation
+        - Mobile site (m.youtube.com)
+        - A /shorts/ link did not open in the normal player
+        - Somewhere else
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page address
+      description: Remove anything personal from the address first.
+      placeholder: https://www.youtube.com/results?search_query=...
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Brave 1.98, Firefox 145, ...
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: YouTube language
+      placeholder: English, Deutsch, ...
+  - type: dropdown
+    id: account
+    attributes:
+      label: Signed in to YouTube?
+      options:
+        - "Yes"
+        - "No"
+  - type: textarea
+    id: details
+    attributes:
+      label: Screenshot and element name
+      description: >
+        Add a screenshot. If you can, right-click the leftover element, choose Inspect, and paste the name of the
+        nearest wrapper element (starts with ytd- or ytm-, or ends with -view-model).
+    validations:
+      required: true
